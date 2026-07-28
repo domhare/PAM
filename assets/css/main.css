@@ -4078,6 +4078,11 @@ span {
   align-items: center;
   gap: 60px;
 }
+@media (max-width: 1199px) {
+  .header-section-2 .header-2 .header-left {
+    gap: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .header-section-2 .header-2 .header-right {
     gap: 5px;
