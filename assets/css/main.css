@@ -10271,6 +10271,25 @@ span {
   bottom: 0;
   right: 0;
 }
+.gt-avatar-initial {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 56px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  flex-shrink: 0;
+}
+@media (max-width: 470px) {
+  .gt-avatar-initial {
+    width: 100%;
+    height: 100%;
+  }
+}
 .gt-testimonail-wrapper-2 .gt-testimonial-slider-2 .swiper-slide-active .gt-testimonial-content {
   opacity: 1;
   visibility: visible;
