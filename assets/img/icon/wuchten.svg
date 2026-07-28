@@ -1,0 +1,13 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.5" y="1.5" width="19" height="13" rx="0.5" stroke="#FF5500"/>
+<rect x="13" y="15" width="8" height="2" fill="#FF5500"/>
+<rect x="3" y="28" width="1" height="5" fill="#FF5500"/>
+<rect x="29" y="25" width="2" height="5" fill="#FF5500"/>
+<rect x="3" y="37" width="1" height="7" fill="#FF5500"/>
+<rect x="1" y="30" width="2" height="1" fill="#FF5500"/>
+<path d="M28 23V46H36V49H6V23L9 19H25L28 23ZM9 23H12V21H10L9 23ZM14 23H16V21H14V23ZM18 23H20V21H18V23ZM22 21V23H25L24 21H22Z" fill="#FF5500"/>
+<rect x="1" y="40" width="2" height="1" fill="#FF5500"/>
+<path d="M37 40C34.7909 40 33 38.2091 33 36V18C33 15.7909 34.7909 14 37 14V40ZM40 14V40H38V14H40ZM41 14C43.2091 14 45 15.7909 45 18V36C45 38.2091 43.2091 40 41 40V14Z" fill="#FF5500"/>
+<rect x="47" y="31" width="1" height="7" transform="rotate(-180 47 31)" fill="#FF5500"/>
+<rect x="49" y="28" width="2" height="1" transform="rotate(-180 49 28)" fill="#FF5500"/>
+</svg>

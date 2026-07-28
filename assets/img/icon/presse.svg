@@ -1,0 +1,15 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="6" y="1" width="39" height="7" rx="1" fill="#FF5500"/>
+<rect x="8" y="9" width="5" height="17" fill="#FF5500"/>
+<path d="M8 33H11L13 35V49H5L8 45V33Z" fill="#FF5500"/>
+<path d="M43 33H40L38 35V49H46L43 45V33Z" fill="#FF5500"/>
+<rect x="19" y="9" width="13" height="2" fill="#FF5500"/>
+<rect x="22" y="11" width="7" height="2" fill="#FF5500"/>
+<rect x="20" y="23" width="11" height="3" fill="#FF5500"/>
+<rect x="20" y="45" width="11" height="2" fill="#FF5500"/>
+<path d="M6 29C6 28.4477 6.44772 28 7 28H44C44.5523 28 45 28.4477 45 29V31C45 31.5523 44.5523 32 44 32H39.4142C39.149 32 38.8946 32.1054 38.7071 32.2929L36.2929 34.7071C36.1054 34.8946 35.851 35 35.5858 35H15.4142C15.149 35 14.8946 34.8946 14.7071 34.7071L12.2929 32.2929C12.1054 32.1054 11.851 32 11.5858 32H7C6.44772 32 6 31.5523 6 31V29Z" fill="#FF5500"/>
+<rect x="24" y="13" width="3" height="6" fill="#FF5500"/>
+<rect x="38" y="9" width="5" height="17" fill="#FF5500"/>
+<rect x="27" y="12.7351" width="1" height="7" transform="rotate(-47.3183 27 12.7351)" fill="#FF5500"/>
+<rect x="31.468" y="18.2157" width="3" height="5" rx="1" transform="rotate(-47.3183 31.468 18.2157)" fill="#FF5500"/>
+</svg>
