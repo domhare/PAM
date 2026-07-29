@@ -682,16 +682,28 @@
                                 <p class="gt-choose-text wow fadeInUp" data-wow-delay=".5s">
                                    Sparen Sie Zeit und Nerven! Wir führen die gesetzlich vorgeschriebene Haupt- und Abgasuntersuchung (HU/AU) durch. Nutzen Sie auch unseren Vorab-Check, damit Ihr Fahrzeug die Plakette ohne Überraschungen direkt beim ersten Mal erhält.
                                 </p>
-                                <ul class="gt-icon-items wow fadeInUp" data-wow-delay=".3s">
-                                    <li>
+                                <style>
+                                    @media (max-width: 767px) {
+                                        .hu-au-icon-row {
+                                            flex-wrap: wrap;
+                                        }
+                                        .hu-au-icon-row .hu-au-icon-item {
+                                            flex: 0 0 48%;
+                                            max-width: 48%;
+                                            height: auto;
+                                        }
+                                    }
+                                </style>
+                                <ul class="gt-icon-items hu-au-icon-row wow fadeInUp" data-wow-delay=".3s">
+                                    <li class="hu-au-icon-item">
                                         <div class="icon">
                                             <i class="fa-solid fa-clock" style="color: var(--gt-theme); font-size: 40px;"></i>
                                         </div>
                                         <div class="content">
-                                            <h4>Montags & Donnerstags <br> ab 15 Uhr</h4>
+                                            <h4>Mo + Do <br> ab 15 Uhr</h4>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="hu-au-icon-item">
                                         <div class="icon">
                                             <i class="fa-solid fa-file-lines" style="color: var(--gt-theme); font-size: 40px;"></i>
                                         </div>
@@ -700,6 +712,13 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <div class="w-100" style="margin-top: 20px;">
+                                    <a href="contact.html" class="gt-theme-btn w-100">
+                                        <span class="gt-text-btn w-100" style="text-align: center;">
+                                            <span class="gt-text-2">WERKZEUGSUCHE</span>
+                                        </span>
+                                    </a>
+                                </div>
                                <div class="gt-feature-list-box">
                                     <div class="client-box wow fadeInUp" data-wow-delay=".3s">
                                         <img src="assets/img/home-2/client-info.png" alt="img">
