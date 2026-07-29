@@ -326,10 +326,10 @@
     if($('.gt-testimonial-slider-2').length > 0) {
         const gtTestimonialSlider2 = new Swiper(".gt-testimonial-slider-2", {
             spaceBetween: 30,
-            speed: 1300,
+            speed: 2000,
             loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
 
