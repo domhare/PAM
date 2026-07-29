@@ -3446,6 +3446,12 @@ span {
   }
 }
 
+.mega-menu-wrapper {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
 .header-main {
   display: flex;
   align-items: center;
