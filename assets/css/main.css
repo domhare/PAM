@@ -6306,7 +6306,7 @@ span {
 }
 .preloader .animation-preloader .txt-loading .letters-loading::before {
   animation: letters-loading 4s infinite;
-  color: var(--gt-header);
+  color: #00519E;
   content: attr(data-text-preloader);
   left: 0;
   opacity: 0;
