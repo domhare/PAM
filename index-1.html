@@ -1181,7 +1181,10 @@
             window.addEventListener('load', function () {
                 var heroSliderEl = document.querySelector('.gt-hero-slider');
                 if (heroSliderEl && heroSliderEl.swiper) {
-                    heroSliderEl.swiper.autoplay.stop();
+                    var heroSwiper = heroSliderEl.swiper;
+                    heroSwiper.params.autoplay.delay = 20000;
+                    heroSwiper.autoplay.stop();
+                    heroSwiper.autoplay.start();
                 }
             });
         </script>
