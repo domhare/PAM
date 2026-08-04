@@ -57,13 +57,21 @@
             .sticky.header-1 .header-right .gt-theme-btn .gt-text-btn {
                 background-color: #FFD100;
             }
-            .header-1 .header-right .header-right-icon .cart-icon {
+            .header-1 .header-right .header-right-icon .cart-icon,
+            .sticky.header-1 .header-right .header-right-icon .cart-icon {
                 background-color: #005CA9;
                 color: #fff;
             }
-            .header-1 .header-right .header-right-icon .cart-icon:hover {
+            .header-1 .header-right .header-right-icon .cart-icon:hover,
+            .sticky.header-1 .header-right .header-right-icon .cart-icon:hover {
                 background-color: #FFD100;
                 color: #fff;
+            }
+            .header-1 .header-right {
+                flex-wrap: nowrap;
+            }
+            .header-1 .header-right .header-right-icon {
+                flex-wrap: nowrap;
             }
             @media (min-width: 1200px) {
                 .header-main .main-menu ul li .submenu.gt-submenu-2col {
@@ -494,9 +502,15 @@
                                     <img src="assets/img/home-1/about/box-shape.png" alt="img">
                                 </div>
                                 <div class="gt-about-image">
-                                    <img src="assets/img/home-3/about/about-01.jpg" alt="img" class="gt-about-img-1 wow img-custom-anim-left">
+                                    <img src="assets/img/home-1/about/about-01.jpg" alt="img" class="gt-about-img-1 wow img-custom-anim-left">
                                     <div class="gt-about-image-2">
-                                        <img src="assets/img/home-3/about/about-02.jpg" alt="img" class="wow img-custom-anim-right">
+                                        <img src="assets/img/home-1/about/about-02.jpg" alt="img" class="wow img-custom-anim-right">
+                                    </div>
+                                    <div class="gt-counter-box">
+                                        <h2><span class="gt-count">25</span>+</h2>
+                                        <p>
+                                            YEARS OF <br> EXPERIENCED
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -504,32 +518,36 @@
                         <div class="col-lg-6">
                             <div class="gt-about-content">
                                 <div class="gt-section-title mb-0">
-                                    <span class="wow fadeInUp"><img src="assets/img/sub-icon.svg" alt="img">Servicewerkstatt</span>
+                                    <span class="wow fadeInUp"><img src="assets/img/sub-icon.svg" alt="img">About Us</span>
                                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        KFZ-Meisterbetrieb für alle Marken
+                                        Powering Your Drive, One Repair at a Time.
                                     </h2>
                                 </div>
                                 <p class="gt-about-text wow fadeInUp" data-wow-delay=".5s">
-                                    Wir bieten Ihnen Reparatur und Diagnose sowie Inspektion, Reifenservice, Klimaservice, Hauptuntersuchung (inkl. AU) und viele weitere Leistungen an.
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiu doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto nihl beatae vitae.
                                 </p>
                                 <ul class="gt-about-list wow fadeInUp" data-wow-delay=".3s">
                                     <li>
                                         <i class="icon-icon-3"></i>
-                                        Alle notwendigen Arbeiten besprechen wir mit Ihnen persönlich im Vorfeld.
+                                        Precision Automotive Services
                                     </li>
                                     <li>
                                         <i class="icon-icon-3"></i>
-                                        Herstellerunabhängige, markenübergreifende Meisterwerkstatt.
+                                        Elite Automotive Solutions
                                     </li>
                                     <li>
                                         <i class="icon-icon-3"></i>
-                                        Unser geschultes Team hat den Anspruch, Ihnen und Ihrem Auto das Beste zu bieten.
+                                        Drive worry-free thanks to our repair mastery
+                                    </li>
+                                    <li>
+                                        <i class="icon-icon-3"></i>
+                                        Restoring your car's power one repair
                                     </li>
                                 </ul>
                                 <div class="gt-about-button wow fadeInUp" data-wow-delay=".3s">
-                                    <a href="tel:+4982145536636" class="gt-theme-btn">
+                                    <a href="about.html" class="gt-theme-btn">
                                         <span class="gt-text-btn">
-                                            <span class="gt-text-2">ANRUFEN</span>
+                                            <span class="gt-text-2">READ MORE</span>
                                         </span>
                                     </a>
                                 </div>
@@ -1186,6 +1204,23 @@
                     heroSwiper.params.autoplay.delay = 20000;
                     heroSwiper.autoplay.stop();
                     heroSwiper.autoplay.start();
+                }
+
+                var submenu = document.querySelector('.gt-submenu-2col');
+                var submenuLi = submenu && submenu.closest('li');
+                if (submenu && submenuLi) {
+                    var centerSubmenu = function () {
+                        if (window.innerWidth < 1200) {
+                            submenu.style.left = '';
+                            return;
+                        }
+                        var liLeft = submenuLi.getBoundingClientRect().left;
+                        var dropdownWidth = submenu.offsetWidth;
+                        var desiredLeft = (window.innerWidth / 2) - (dropdownWidth / 2) - liLeft;
+                        submenu.style.left = desiredLeft + 'px';
+                    };
+                    centerSubmenu();
+                    window.addEventListener('resize', centerSubmenu);
                 }
             });
         </script>
