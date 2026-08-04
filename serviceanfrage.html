@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="de">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Pixel-plus">
+        <meta name="description" content="KFZ-Service Buila - Serviceanfrage stellen. Termin und Reparatur unkompliziert anfragen.">
+        <!-- ======== Page title ============ -->
+        <title>Serviceanfrage - KFZ-Service Buila</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+        <meta name="msapplication-config" content="assets/img/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Icomon.css >>-->
+        <link rel="stylesheet" href="assets/css/icomon.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            :root {
+                --gt-theme: #005CA9;
+                --gt-header: #161921;
+            }
+            .header-1 .header-right .gt-theme-btn .gt-text-btn,
+            .sticky.header-1 .header-right .gt-theme-btn .gt-text-btn {
+                background-color: #FFD100;
+            }
+            .header-1 .header-right .header-right-icon .cart-icon,
+            .sticky.header-1 .header-right .header-right-icon .cart-icon {
+                background-color: #005CA9;
+                color: #fff;
+            }
+            .header-1 .header-right .header-right-icon .cart-icon:hover,
+            .sticky.header-1 .header-right .header-right-icon .cart-icon:hover {
+                background-color: #FFD100;
+                color: #fff;
+            }
+            .header-1 .header-right {
+                flex-wrap: nowrap;
+            }
+            .header-1 .header-right .header-right-icon {
+                flex-wrap: nowrap;
+            }
+            @media (min-width: 1200px) {
+                .header-main .main-menu ul li .submenu.gt-submenu-2col {
+                    width: 1320px;
+                    max-width: calc(100vw - 40px);
+                    -webkit-column-count: 4;
+                    column-count: 4;
+                    column-gap: 0;
+                }
+                .header-main .main-menu ul li .submenu.gt-submenu-2col li {
+                    -webkit-column-break-inside: avoid;
+                    break-inside: avoid;
+                }
+            }
+
+            /* Serviceanfrage form */
+            .gt-serviceanfrage-section {
+                padding: 100px 0;
+            }
+            .sa-section {
+                margin-bottom: 60px;
+            }
+            .sa-section-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 26px;
+                font-weight: 700;
+                color: #161921;
+                margin-bottom: 30px;
+            }
+            .sa-section-title svg {
+                flex-shrink: 0;
+            }
+            .sa-tabs {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #E5E5E5;
+            }
+            .sa-tab {
+                background: none;
+                border: none;
+                padding: 0 0 14px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #696B72;
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                margin-bottom: -1px;
+            }
+            .sa-tab.active {
+                color: var(--gt-theme);
+                border-bottom-color: var(--gt-theme);
+            }
+            .sa-field {
+                margin-bottom: 20px;
+            }
+            .sa-field label {
+                display: block;
+                font-size: 14px;
+                color: #696B72;
+                margin-bottom: 8px;
+            }
+            .sa-field label .req {
+                color: var(--gt-theme);
+            }
+            .sa-field input[type="text"],
+            .sa-field input[type="email"],
+            .sa-field input[type="tel"],
+            .sa-field input[type="file"],
+            .sa-field textarea {
+                width: 100%;
+                border: 1px solid #DADADA;
+                border-radius: 4px;
+                padding: 14px 16px;
+                font-size: 15px;
+                font-family: inherit;
+                color: #161921;
+            }
+            .sa-field textarea {
+                resize: vertical;
+            }
+            .sa-hint {
+                margin-top: 10px;
+                color: #696B72;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+            .sa-hint a {
+                color: var(--gt-theme);
+                text-decoration: underline;
+            }
+            .sa-service-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 30px 20px;
+            }
+            @media (max-width: 991px) {
+                .sa-service-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 575px) {
+                .sa-service-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .sa-service-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                cursor: pointer;
+            }
+            .sa-service-item input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                accent-color: var(--gt-theme);
+            }
+            .sa-service-icon {
+                width: 48px;
+                height: 48px;
+                border: 1px solid var(--gt-theme);
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--gt-theme);
+                font-size: 20px;
+                flex-shrink: 0;
+            }
+            .sa-service-label {
+                font-weight: 600;
+                color: #161921;
+                font-size: 15px;
+                line-height: 1.3;
+            }
+            .sa-consent {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                margin: 10px 0 25px;
+                font-size: 14px;
+                color: #696B72;
+                cursor: pointer;
+            }
+            .sa-consent input[type="checkbox"] {
+                margin-top: 4px;
+                accent-color: var(--gt-theme);
+                flex-shrink: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+       <!-- Preloader Start -->
+        <!--
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="P" class="letters-loading">
+                        P
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="&nbsp;" class="letters-loading">
+                        &nbsp;
+                    </span>
+                    <span data-text-preloader="&amp;" class="letters-loading">
+                        &amp;
+                    </span>
+                    <span data-text-preloader="&nbsp;" class="letters-loading">
+                        &nbsp;
+                    </span>
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                </div>
+                <p class="text-center">Wird geladen</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- GT Back To Top Start -->
+        <button id="gt-back-top" class="gt-back-to-top show">
+           <img src="assets/img/icon/up-arrow.svg" alt="">
+        </button>
+
+
+
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index-1.html">
+                                    <img src="assets/img/home-3/builalogo.svg" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Dillinger Weg 8-10, 86156 Augsburg</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:info@kfzservice-buila.de"><span class="mailto:info@kfzservice-buila.de">info@kfzservice-buila.de</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Mo-Fr, 09:00 - 18:00 Uhr</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+49 (0) 821 455-366-36">+49 (0) 821 455-366-36</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+
+                            </div>
+                            <a href="contact.php" class="gt-theme-btn">
+                                <span class="gt-text-btn">
+                                    <span class="gt-text-2">JETZT ANFRAGEN</span>
+                                </span>
+                            </a>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="https://www.facebook.com/kfzbuila" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/kfzbuila" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/+4917640437695" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1 bg-theme">
+            <div class="container-fluid">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <div class="logo">
+                            <a href="index-1.html" class="header-logo1">
+                                <img src="assets/img/home-3/builalogo.svg" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="header-main-right-item">
+                            <div class="head-top-wrapper">
+                                <ul>
+                                    <li>
+                                        Willkommen bei KFZ-Service Buila
+                                    </li>
+                                    <li>
+                                        /
+                                    </li>
+                                    <li>
+                                        Öffnungszeiten: Montag bis Freitag: 09:00 - 18:00 Uhr
+                                    </li>
+                                </ul>
+                                <div class="gt-social-icon d-flex align-items-center">
+                                    <a href="https://www.facebook.com/kfzbuila" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/kfzbuila" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://wa.me/+4917640437695" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                            <div class="header-right-area">
+                                <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb">
+                                                <a href="index-1.html">
+                                                    Start
+                                                </a>
+                                            </li>
+                                            <li class="d-xl-none">
+                                                <a href="index-1.html" class="border-none">
+                                                Start
+                                                </a>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="https://www.kfzservice-buila.de/unser-service.html">
+                                                    Unser Service
+                                                </a>
+                                                <ul class="submenu gt-submenu-2col">
+                                                    <li><a href="https://www.kfzservice-buila.de/service-reifen.html">Räder und Reifen</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-bremsen.html">Bremsen-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-oelwechsel.html">Öl-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-achsvermessung.html">Achsvermessung</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-auspuff.html">Auspuff-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-diagnose.html">Motordiagnose</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-klima.html">Klima-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-fahrwerk.html">Fahrwerk-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-batterie.html">Batterie-Service</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-getriebe.html">Automatikgetriebespülung</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-inspektion.html">Inspektion</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-hu.html">HU (mit integrierter AU)</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-autoglas.html">Autoglasreparatur</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-einlagerung.html">Reifen-Einlagerung</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-unfall.html">Unfallinstandsetzung</a></li>
+                                                    <li><a href="https://www.kfzservice-buila.de/service-urlaub.html">Urlaubs-Check</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.kfzservice-buila.de/ueber-uns.html">
+                                                    Über uns
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.kfzservice-buila.de/aktionen.html">
+                                                    Aktionen
+                                                </a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="serviceanfrage.html">
+                                                    Serviceanfrage
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.kfzservice-buila.de/kontakt.html">Kontakt</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                </div>
+                                <div class="header-right d-flex justify-content-end align-items-center">
+                                    <div class="header-right-icon">
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Dillinger+Weg+8-10%2C+86156+Augsburg" target="_blank" rel="noopener" class="cart-icon"><i class="fa-solid fa-location-dot"></i></a>
+                                        <a href="tel:+4982145536636" class="cart-icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </a>
+                                    </div>
+                                    <a href="contact.html" class="gt-theme-btn">
+                                        <span class="gt-text-btn">
+                                            <span class="gt-text-2">JETZT ANFRAGEN</span>
+                                        </span>
+                                    </a>
+                                    <div class="header__hamburger d-xl-none my-auto">
+                                        <div class="sidebar__toggle">
+                                            <div class="header-bar">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- GT Search Start -->
+        <div class="search-popup">
+            <div class="search-popup__overlay search-toggler"></div>
+            <div class="search-popup__content">
+                <form role="search" method="get" class="search-popup__form" action="#">
+                    <input type="text" id="search" name="search" placeholder="Search Here...">
+                    <button type="submit" aria-label="search submit" class="search-btn">
+                        <span><i class="fa-regular fa-magnifying-glass"></i></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- GT Breadcrumb Section Start -->
+        <div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
+            <div class="gt-right-shape">
+                <img src="assets/img/breadcrumb-shape.jpg" alt="img">
+            </div>
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">SERVICEANFRAGE</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="index-1.html">
+                                Start
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            Serviceanfrage
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- GT Serviceanfrage Section Start -->
+        <section class="gt-serviceanfrage-section">
+            <div class="container">
+                <form action="#" method="POST" id="serviceanfrage-form">
+
+                    <!-- Informationen zum Fahrzeug -->
+                    <div class="sa-section">
+                        <h3 class="sa-section-title">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 0L2 20H0L6 0H8Z" fill="#005CA9"/><path d="M14 0L11 20H9L12 0H14Z" fill="#FFD100"/></svg>
+                            Informationen zum Fahrzeug
+                        </h3>
+                        <div class="sa-tabs">
+                            <button type="button" class="sa-tab active" data-sa-tab="schluessel">Schlüsselnummern</button>
+                            <button type="button" class="sa-tab" data-sa-tab="bild">Bilddatei</button>
+                        </div>
+                        <div class="sa-tab-panel" data-sa-panel="schluessel">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="sa-field">
+                                        <label for="erstzulassung">Erstzulassung</label>
+                                        <input type="text" id="erstzulassung" name="erstzulassung">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sa-field">
+                                        <label for="hsn">HSN</label>
+                                        <input type="text" id="hsn" name="hsn">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sa-field">
+                                        <label for="tsn">TSN</label>
+                                        <input type="text" id="tsn" name="tsn">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sa-tab-panel" data-sa-panel="bild" style="display:none;">
+                            <div class="sa-field">
+                                <label for="fahrzeugschein-bild">Bilddatei des Fahrzeugscheins</label>
+                                <input type="file" id="fahrzeugschein-bild" name="fahrzeugschein_bild" accept="image/*">
+                            </div>
+                        </div>
+                        <p class="sa-hint">
+                            Für Inspektions- und Wartungsarbeiten benötigen wir Angaben aus Ihrem <strong>Fahrzeugschein</strong>. Diese können Sie entweder im Formular eingeben oder als Bilddatei hochladen. Hilfe zu den Angaben finden sie <a href="#">hier</a>.
+                        </p>
+                    </div>
+
+                    <!-- Servicewunsch -->
+                    <div class="sa-section">
+                        <h3 class="sa-section-title">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 0L2 20H0L6 0H8Z" fill="#005CA9"/><path d="M14 0L11 20H9L12 0H14Z" fill="#FFD100"/></svg>
+                            Servicewunsch
+                        </h3>
+                        <div class="sa-service-grid">
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Inspektion">
+                                <span class="sa-service-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span class="sa-service-label">Inspektion</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="HU / AU">
+                                <span class="sa-service-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+                                <span class="sa-service-label">HU / AU</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Bremsen">
+                                <span class="sa-service-icon"><i class="fa-solid fa-compact-disc"></i></span>
+                                <span class="sa-service-label">Bremsen</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Klima-Service">
+                                <span class="sa-service-icon"><i class="fa-solid fa-snowflake"></i></span>
+                                <span class="sa-service-label">Klima-Service</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Motor-Diagnose">
+                                <span class="sa-service-icon"><i class="fa-solid fa-stethoscope"></i></span>
+                                <span class="sa-service-label">Motor-Diagnose</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Räderwechsel">
+                                <span class="sa-service-icon"><i class="fa-solid fa-dharmachakra"></i></span>
+                                <span class="sa-service-label">Räderwechsel</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Elektrik">
+                                <span class="sa-service-icon"><i class="fa-solid fa-bolt"></i></span>
+                                <span class="sa-service-label">Elektrik</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Autoglas">
+                                <span class="sa-service-icon"><i class="fa-solid fa-window-maximize"></i></span>
+                                <span class="sa-service-label">Autoglas</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Kupplung">
+                                <span class="sa-service-icon"><i class="fa-solid fa-gear"></i></span>
+                                <span class="sa-service-label">Kupplung</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Öl-Service">
+                                <span class="sa-service-icon"><i class="fa-solid fa-oil-can"></i></span>
+                                <span class="sa-service-label">Öl-Service</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Getriebespülung">
+                                <span class="sa-service-icon"><i class="fa-solid fa-droplet"></i></span>
+                                <span class="sa-service-label">Getriebe&shy;spülung</span>
+                            </label>
+                            <label class="sa-service-item">
+                                <input type="checkbox" name="service[]" value="Sonstige">
+                                <span class="sa-service-icon"><i class="fa-solid fa-circle-question"></i></span>
+                                <span class="sa-service-label">Sonstige</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Kontaktdaten -->
+                    <div class="sa-section mb-0">
+                        <h3 class="sa-section-title">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 0L2 20H0L6 0H8Z" fill="#005CA9"/><path d="M14 0L11 20H9L12 0H14Z" fill="#FFD100"/></svg>
+                            Kontaktdaten
+                        </h3>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="sa-field">
+                                    <label for="vorname">Vorname <span class="req">*</span></label>
+                                    <input type="text" id="vorname" name="vorname" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="sa-field">
+                                    <label for="nachname">Nachname <span class="req">*</span></label>
+                                    <input type="text" id="nachname" name="nachname" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="sa-field">
+                                    <label for="email">E-Mail Adresse <span class="req">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="sa-field">
+                                    <label for="telefon">Telefonnummer <span class="req">*</span></label>
+                                    <input type="tel" id="telefon" name="telefon" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="sa-field mb-0">
+                                    <label for="nachricht">Nachricht <span class="req">*</span></label>
+                                    <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="sa-consent">
+                            <input type="checkbox" name="consent" required>
+                            <span>Ich willige ein, dass diese Website meine übermittelten Informationen speichert, sodass meine Anfrage beantwortet werden kann.</span>
+                        </label>
+                        <button type="submit" class="gt-theme-btn">
+                            <span class="gt-text-btn">
+                                <span class="gt-text-2">ABSENDEN</span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- GT Footer Section Start -->
+        <footer class="gt-footer-section bg-cover fix" style="background-image: url('assets/img/footer-bg.jpg');">
+            <div class="container">
+                <div class="gt-footer-widget-wrapper">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-5 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <a href="index-1.html" class="gt-footer-logo">
+                                        <img src="assets/img/home-3/builalogo.svg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="gt-footer-content">
+                                    <p>
+                                        Ihre Kfz-Meisterwerkstatt für alle Marken in Augsburg.
+                                    </p>
+                                    <div class="opening-hours-list">
+                                        <h4>Öffnungszeiten</h4>
+                                        <ul class="opening-list">
+                                            <li>
+                                                Montag - Freitag
+                                                <span>09:00 - 18:00 Uhr</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="gt-footer-widget-items">
+                                        <div class="gt-widget-head">
+                                            <h3>Unsere Leistungen</h3>
+                                        </div>
+                                        <ul class="gt-list-area">
+                                            <li>
+                                                <a href="service-details.html">
+                                                    Inspektion
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-details.html">
+                                                    Bremsen-Service
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-details.html">
+                                                    HU (mit integrierter AU)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-details.html">
+                                                    Motordiagnose
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 ps-lg-3 col-lg-6 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="gt-footer-widget-items">
+                                        <div class="gt-widget-head">
+                                            <h3>Kontakt</h3>
+                                        </div>
+                                        <ul class="gt-list-area">
+                                            <li>
+                                                <a href="tel:+4982145536636">
+                                                    0821 455-366-36
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="mailto:info@kfzservice-buila.de">
+                                                    info@kfzservice-buila.de
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://wa.me/+4917640437695" target="_blank">
+                                                    WhatsApp Chat starten
+                                                </a>
+                                            </li>
+                                            <li>
+                                                Dillinger Weg 8-10, 86156 Augsburg
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s">
+                <div class="container">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <p class="mb-0">© 2026 <b>KFZ-Service Buila</b>. Alle Rechte vorbehalten.</p>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="https://www.facebook.com/kfzbuila" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/kfzbuila" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/+4917640437695" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            window.addEventListener('load', function () {
+                var submenu = document.querySelector('.gt-submenu-2col');
+                var submenuLi = submenu && submenu.closest('li');
+                if (submenu && submenuLi) {
+                    var centerSubmenu = function () {
+                        if (window.innerWidth < 1200) {
+                            submenu.style.left = '';
+                            return;
+                        }
+                        var liLeft = submenuLi.getBoundingClientRect().left;
+                        var dropdownWidth = submenu.offsetWidth;
+                        var desiredLeft = (window.innerWidth / 2) - (dropdownWidth / 2) - liLeft;
+                        submenu.style.left = desiredLeft + 'px';
+                    };
+                    centerSubmenu();
+                    window.addEventListener('resize', centerSubmenu);
+                }
+
+                var tabs = document.querySelectorAll('.sa-tab');
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        tabs.forEach(function (t) { t.classList.remove('active'); });
+                        document.querySelectorAll('.sa-tab-panel').forEach(function (panel) {
+                            panel.style.display = 'none';
+                        });
+                        tab.classList.add('active');
+                        var panel = document.querySelector('.sa-tab-panel[data-sa-panel="' + tab.getAttribute('data-sa-tab') + '"]');
+                        if (panel) {
+                            panel.style.display = '';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
