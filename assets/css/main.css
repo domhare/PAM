@@ -7443,7 +7443,7 @@ span {
   display: none;
 }
 .gt-section-title h2 {
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .gt-section-title-area {
