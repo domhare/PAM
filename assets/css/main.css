@@ -4440,7 +4440,7 @@ span {
 }
 .gt-breadcrumb-wrapper .gt-page-heading h1 {
   color: var(--gt-white);
-  font-size: 72px;
+  font-size: 65px;
   position: relative;
   text-transform: capitalize;
   z-index: 9;
