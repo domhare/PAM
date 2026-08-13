@@ -8159,6 +8159,12 @@ span {
   background-color: #F5F5F5;
   border-radius: 8px;
 }
+@media (min-width: 1200px) {
+  .gt-col-5 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
 .gt-shop-card-items .gt-shop-image {
   position: relative;
   overflow: hidden;
