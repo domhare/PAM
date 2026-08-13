@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/live-link-83fjuv
   workflow_dispatch:
 
 permissions:
