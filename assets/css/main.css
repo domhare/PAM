@@ -6270,50 +6270,27 @@ span {
   }
 }
 .preloader .animation-preloader .txt-loading {
-  font: bold 5em "Plus Jakarta Sans", sans-serif, "Inter", sans-serif;
   text-align: center;
   user-select: none;
 }
+.preloader .animation-preloader .txt-loading .preloader-logo {
+  width: 220px;
+  max-width: 60vw;
+  height: auto;
+  animation: preloader-logo-pulse 1.4s ease-in-out infinite;
+}
 @media (max-width: 767px) {
-  .preloader .animation-preloader .txt-loading {
-    font-size: 2.5em;
+  .preloader .animation-preloader .txt-loading .preloader-logo {
+    width: 160px;
   }
 }
-.preloader .animation-preloader .txt-loading .letters-loading {
-  color: var(--gt-theme);
-  position: relative;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
-  animation-delay: 0.2s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
-  animation-delay: 0.4s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
-  animation-delay: 0.6s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
-  animation-delay: 0.8s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
-  animation-delay: 1s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
-  animation-delay: 1.2s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
-  animation-delay: 1.4s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading::before {
-  animation: letters-loading 4s infinite;
-  color: #00519E;
-  content: attr(data-text-preloader);
-  left: 0;
-  opacity: 0;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  position: absolute;
-  top: -3px;
-  transform: rotateY(-90deg);
+@keyframes preloader-logo-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 .preloader p {
   font-size: 15px;
